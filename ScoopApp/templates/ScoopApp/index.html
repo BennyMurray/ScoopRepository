@@ -33,25 +33,25 @@
 			<div id="container" >
 				<div id="title_div">
 					<h1 id="scoop">Scoop</h1>
-					<h3 id="beer_engine">beer search engine</h3>
+					<h3 id="beer_engine"></h3>
 				</div>
-				<div id="slider_one">
-					<div id="slider1">
+				<div  id="slider_one">
+					<div class='slider_box' id="slider1">
 						<input type="text" id="volume1" class="strength" />
 						<h5 class="slider_label">Strength</h5>
 					</div>
 
-					<div id="slider2">
+					<div class='slider_box' id="slider2">
 						<input type="text" id="volume2" class="colour" />
 						<h5 class="slider_label" id="color">Colour</h5>
 					</div>
 
-					<div id="slider3">
+					<div class='slider_box' id="slider3">
 						<input type="text" id="volume3" class="bitterness" />
 						<h5 class="slider_label">Bitterness</h5>
 					</div>
 
-					<div id="slider4">
+					<div class='slider_box' id="slider4">
 						<input type="text" id="volume4" class="funkiness" />
 						<h5 class="slider_label">Acidity/Funk</h5>
 					</div>
@@ -88,7 +88,7 @@
 					<!--Redundant? -->
 					<div id="searchbutton_div">
 
-						<h2 id="searchButton" class="animated infinite flipInY">Hit 'return' to search...</h2>
+						<h2 id="searchButton" class="animated infinite flipInY">Swipe 'return' to search...</h2>
 					</div>
 	</div>
 
@@ -163,6 +163,10 @@
 	<!-- Powerrange.js (allows customization of slider form (for volume slider) -->
 		<script src="{% static 'libraries/../../static/map/../../static/libraries/powerange.js' %}"></script>
 
+
+
+        <script src="{%  static 'libraries/hammer.min.js' %}"></script>
+
 	<!--Main Script	-->
 		<script type="text/javascript">
 
@@ -187,7 +191,8 @@
 			var elem4 = document.querySelector('.funkiness');
 			var init4 = new Powerange(elem4, {callback: changeLemon,vertical: false, min: 0, max: 100, start: 0, step:0.5, hideRange: true});
 
-
+			var myElement = document.body;
+            var mc = new Hammer(myElement);
 
 
 
@@ -204,7 +209,7 @@
                         var s = document.getElementById("scoop");
                         s.className += " animated bounceIn";
 						document.getElementById('beer_engine').style.fontSize = "1.25vw";
-						document.getElementById('beer_engine').innerHTML = "hit <b>'Return'</b> to search!";
+						document.getElementById('beer_engine').innerHTML = "<b>Tap 👋</b> to view!";
 						document.getElementById('title_div').style.cursor = 'pointer';
 						document.getElementById('searchbutton_div').style.opacity = '0';
 
@@ -523,8 +528,8 @@
 
 
             <!-- ON KEY PRESS (Enter): sends and receives JSON from server -->
-            $(document).keypress(function (e) {
-                if (e.which == 13) {
+             mc.on("tap", function(ev) {
+
 
                 if (elem.value + elem2.value + elem3.value + elem4.value != 0) {
                     {#			$.getJSON("http://scoop.pythonanywhere.com/api/Craftbeers/", {#}
@@ -577,9 +582,7 @@
                     });
                 }
 
-                   }else{
-            alert("Please enter search values")
-        }
+
             });
 
 

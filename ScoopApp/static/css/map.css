@@ -29,6 +29,7 @@ body{
 }
 
 #container:hover {
+
     color: #FF00FF;
 
 }
@@ -52,6 +53,7 @@ body{
 }
 
 #divtoshow {
+
     position: absolute;
     opacity: 1;
 	border: solid 2px black;
@@ -63,13 +65,11 @@ body{
 
 /*MAP*/
 #rsr{
-
 	position: relative;
 	left: 7%;
 	top: 9%;
 
-	height: 50%;
-	width: 50%;
+
 	overflow: visible;
 	float: left;
 	border: solid 1px transparent;
@@ -79,9 +79,9 @@ body{
 
 	height: 70%;
 	width: 50%;
-	bottom: 40%;
+	top: 17%;
 	right: 5%;
-	position: relative;
+	position: absolute;
 	float: right;
 
 }
