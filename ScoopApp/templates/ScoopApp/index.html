@@ -205,11 +205,12 @@
 				if(sum > 0.3){
 					if(animation_counter == 0){
 
-						document.getElementById('scoop').innerHTML = 'Result!';
+						document.getElementById('scoop').innerHTML = '<b>Tap 👋</b>';
+
                         var s = document.getElementById("scoop");
                         s.className += " animated bounceIn";
 						document.getElementById('beer_engine').style.fontSize = "1.25vw";
-						document.getElementById('beer_engine').innerHTML = "<b>Tap 👋</b> to view!";
+
 						document.getElementById('title_div').style.cursor = 'pointer';
 						document.getElementById('searchbutton_div').style.opacity = '0';
 
@@ -520,9 +521,121 @@
                 'beer9': ['name', 'ABV', 'SRM', 'ACIDITY'],
                 'beer10': ['name', 'ABV', 'SRM', 'ACIDITY'],
                 'beer11': ['name', 'ABV', 'SRM', 'ACIDITY'],
+
                 'beer12': ['name', 'ABV', 'SRM', 'ACIDITY'],
 
             };
+
+
+
+            var beer1 = document.getElementById('beer1');
+            var hammertime = new Hammer(beer1);
+             hammertime.on('doubletap', function(ev) {
+                var res = beer1.src.match('_[0-9]+.jpg');
+                if(res != null){
+                    window.location = "https://www.ratebeer.com/beer/" + res.toString().slice(1, -4) + '/';
+                }
+            });
+             
+            var beer2 = document.getElementById('beer2');
+            var hammertime2 = new Hammer(beer2);
+             hammertime2.on('doubletap', function(ev) {
+                var res = beer2.src.match('_[0-9]+.jpg');
+                 if(res != null){
+                    window.location = "https://www.ratebeer.com/beer/" + res.toString().slice(1, -4) + '/';
+                }
+            });
+             
+               var beer3 = document.getElementById('beer3');
+            var hammertime3 = new Hammer(beer3);
+             hammertime3.on('doubletap', function(ev) {
+                var res = beer3.src.match('_[0-9]+.jpg');
+                  if(res != null){
+                    window.location = "https://www.ratebeer.com/beer/" + res.toString().slice(1, -4) + '/';
+                }
+            });
+
+               var beer4 = document.getElementById('beer4');
+            var hammertime4 = new Hammer(beer4);
+             hammertime4.on('doubletap', function(ev) {
+                var res = beer4.src.match('_[0-9]+.jpg');
+                 if(res != null){
+                    window.location = "https://www.ratebeer.com/beer/" + res.toString().slice(1, -4) + '/';
+                }
+            });
+
+               var beer5 = document.getElementById('beer5');
+            var hammertime5 = new Hammer(beer5);
+             hammertime5.on('doubletap', function(ev) {
+                var res = beer5.src.match('_[0-9]+.jpg');
+                  if(res != null){
+                    window.location = "https://www.ratebeer.com/beer/" + res.toString().slice(1, -4) + '/';
+                }
+            });
+
+                  var beer6 = document.getElementById('beer6');
+            var hammertime6 = new Hammer(beer6);
+             hammertime6.on('doubletap', function(ev) {
+                var res = beer6.src.match('_[0-9]+.jpg');
+                 if(res != null){
+                    window.location = "https://www.ratebeer.com/beer/" + res.toString().slice(1, -4) + '/';
+                }
+            });
+
+
+              var beer7 = document.getElementById('beer7');
+            var hammertime7 = new Hammer(beer1);
+             hammertime7.on('doubletap', function(ev) {
+                var res = beer7.src.match('_[0-9]+.jpg');
+                 if(res != null){
+                    window.location = "https://www.ratebeer.com/beer/" + res.toString().slice(1, -4) + '/';
+                }
+            });
+
+               var beer8 = document.getElementById('beer8');
+            var hammertime8 = new Hammer(beer8);
+             hammertime8.on('doubletap', function(ev) {
+                var res = beer8.src.match('_[0-9]+.jpg');
+                  if(res != null){
+                    window.location = "https://www.ratebeer.com/beer/" + res.toString().slice(1, -4) + '/';
+                }
+            });
+
+               var beer9 = document.getElementById('beer9');
+            var hammertime9 = new Hammer(beer9);
+             hammertime9.on('doubletap', function(ev) {
+                var res = beer9.src.match('_[0-9]+.jpg');
+                  if(res != null){
+                    window.location = "https://www.ratebeer.com/beer/" + res.toString().slice(1, -4) + '/';
+                }
+            });
+
+               var beer10 = document.getElementById('beer10');
+            var hammertime10 = new Hammer(beer1);
+             hammertime10.on('doubletap', function(ev) {
+                var res = beer10.src.match('_[0-9]+.jpg');
+                  if(res != null){
+                    window.location = "https://www.ratebeer.com/beer/" + res.toString().slice(1, -4) + '/';
+                }
+            });
+
+               var beer11 = document.getElementById('beer11');
+            var hammertime11 = new Hammer(beer11);
+             hammertime11.on('doubletap', function(ev) {
+                var res = beer11.src.match('_[0-9]+.jpg');
+                  if(res != null){
+                    window.location = "https://www.ratebeer.com/beer/" + res.toString().slice(1, -4) + '/';
+                }
+            });
+
+                  var beer12 = document.getElementById('beer12');
+            var hammertime12 = new Hammer(beer12);
+             hammertime12.on('doubletap', function(ev) {
+                var res = beer12.src.match('_[0-9]+.jpg');
+                  if(res != null){
+                    window.location = "https://www.ratebeer.com/beer/" + res.toString().slice(1, -4) + '/';
+                }
+            });
 
 
 
@@ -584,8 +697,6 @@
 
 
             });
-
-
 
 
 		</script>

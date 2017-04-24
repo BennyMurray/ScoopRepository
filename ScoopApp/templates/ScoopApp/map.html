@@ -43,6 +43,7 @@
 <script src="{% static 'map/map.js' %}"></script>
 <script src="{% static 'libraries/../../static/map/jquery-2.1.3.min.js' %}"></script>
 
+<script src="{%  static 'libraries/hammer.min.js' %}"></script>
 
 
 <script>
@@ -106,7 +107,7 @@ for (var i = 0; i < regions.length; i++) {
 
 
 
-    regions[i].mouseover(function(e){
+    regions[i].click(function(e){
         var province_name = this.data('id');
 
         document.getElementById('province_title').innerHTML = capitalizeFirstLetter(province_name);
