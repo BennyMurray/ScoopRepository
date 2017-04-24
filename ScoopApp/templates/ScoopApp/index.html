@@ -33,7 +33,7 @@
 			<div id="container" >
 				<div id="title_div">
 					<h1 id="scoop">Scoop</h1>
-					<h3 id="beer_engine"></h3>
+					<h3 id="beer_engine">beer search engine</h3>
 				</div>
 				<div  id="slider_one">
 					<div class='slider_box' id="slider1">
@@ -205,8 +205,9 @@
 				if(sum > 0.3){
 					if(animation_counter == 0){
 
-						document.getElementById('scoop').innerHTML = '<b>Tap 👋</b>';
-
+						document.getElementById('scoop').innerHTML = '<b>Go! 🍺</b>';
+                        document.getElementById('beer_engine').innerHTML = 'tap anywhere to search';
+                        document.getElementById('beer_engine').style.marginTop = '16px';
                         var s = document.getElementById("scoop");
                         s.className += " animated bounceIn";
 						document.getElementById('beer_engine').style.fontSize = "1.25vw";
@@ -632,9 +633,7 @@
             var hammertime12 = new Hammer(beer12);
              hammertime12.on('doubletap', function(ev) {
                 var res = beer12.src.match('_[0-9]+.jpg');
-                  if(res != null){
-                    window.location = "https://www.ratebeer.com/beer/" + res.toString().slice(1, -4) + '/';
-                }
+                window.location = "https://www.ratebeer.com/beer/" + res.toString().slice(1, -4) + '/';
             });
 
 
