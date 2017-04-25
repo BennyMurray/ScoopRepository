@@ -23,7 +23,7 @@ def compare(list1, list2):
         difference_four = 0
 
     #Applies weightings and calculates total difference
-    total_difference = (difference_one * 3) + (difference_three * 0.7) + (difference_four * 2) + (difference_two * 0.3)
+    total_difference = (difference_one * 3) + (difference_three * 0.7) + (difference_four * 2) + (difference_two * 0.8)
     return total_difference
 
 
